@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  slug: MyString
+  note: 9.99
+  username: MyString
+
+two:
+  slug: MyString
+  note: 9.99
+  username: MyString
