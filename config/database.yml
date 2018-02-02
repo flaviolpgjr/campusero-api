@@ -7,7 +7,7 @@ default: &default
   port: 5432
 development:
   <<: *default
-  host: ec2-50-16-231-2.compute-1.amazonaws.com
-  database: d5a1fr7p7ied8a
-  username: wpfgcfqtoogznd
-  password: 333504ce17359de328cebc67cd7d3d2e830906ebc12f50e1fa9b6a6c382be4c8
+  host: localhost
+  database: campusero_api
+  username: campusero_api
+  password: 123456
