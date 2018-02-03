@@ -7,7 +7,7 @@ module Campusero
     # GET campusero/murals
     def index
       @murals = Mural.all
-      render json: @murals
+      render json: {a: ENV['CPBR_CLIENT_ID'], b: ENV['CPBR_SECRET_KEY']}
     end
 
     # GET campusero/murals/1
