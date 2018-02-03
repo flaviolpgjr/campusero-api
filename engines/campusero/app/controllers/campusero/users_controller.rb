@@ -1,4 +1,5 @@
 require_dependency "campusero/application_controller"
+require 'json'
 
 module Campusero
   class UsersController < ApplicationController
@@ -15,8 +16,11 @@ module Campusero
           }
         }
         response = HTTParty.post("https://JsZVPD3fEmZdE9HElgng3Y6Zxxpwi8kMh6g2OTMO:YXW4gvViztWpnK2XSbcSCI9vnvdMo5vO9FfRsOhexh6xHUaJUPTTzHFKvhDtMDXA85XAuC7TKXuLvyLSCGJ2i0ej8LEfiHZVsUHDaDXtgK89F3i7dMbZAHX8aaaulLs1@sandboxaccounts.campuse.ro/o/token/",payload)
-      
         puts response
+        response = JSON.parse(response,symbolize_names:true)
+        puts "***********************"
+        puts response
+       
       end
     end
   
