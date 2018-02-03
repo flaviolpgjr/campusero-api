@@ -12,17 +12,15 @@ module Campusero
 
     # POST campusero/evaluations
     def create
-
       payload = {
         body: {
           score: params[:note]
         },
         headers: {'Authorization': "Bearer #{params[:token]}"}
       }
-      
 
       response = HTTParty.post("https://sandboxapi.campuse.ro/agenda/activity/#{params[:slug]}/rate",payload)
-      
+
       if response.success?
         @evaluation = Campusero::Evaluation.create(evaluation_params)
         if @evaluation.save
@@ -56,14 +54,17 @@ module Campusero
 
     # GET campusero/evaluations/1
     def show
-      res = {
-            evaluations: Campusero::Evaluation.where(slug: params[:id]).count,
-            average: Campusero::Evaluation.where(slug: params[:id]).average(:note),
-            sum: Campusero::Evaluation.where(slug: params[:id]).sum(:note)
-          }
-      render json: res , status: :created, location: @evaluate
+      if params[:id].nil?
+        render json: {error: 'Informe o slug'}
+      else
+        response = {
+          evaluations: Campusero::Evaluation.where(slug: params[:id]).count,
+          average: Campusero::Evaluation.where(slug: params[:id]).average(:note),
+          sum: Campusero::Evaluation.where(slug: params[:id]).sum(:note)
+        }
+        render json: res , status: :created, location: @evaluate
+      end
     end
-
 
     private
       # Use callbacks to share common setup or constraints between actions.
