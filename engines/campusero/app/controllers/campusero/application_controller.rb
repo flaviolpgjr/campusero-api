@@ -1,4 +1,4 @@
 module Campusero
-  class ApplicationController < ActionController::API
+  class ApplicationController < ActionController::Base
   end
 end
