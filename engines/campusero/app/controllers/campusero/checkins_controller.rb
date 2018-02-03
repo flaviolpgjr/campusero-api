@@ -24,7 +24,7 @@ module Campusero
       if params[:username].nil?
         render json: "Informe um usuario"
       else
-        @checkin = Checkin.where(username: params[:username]).order('created_at DESC').last
+        @checkin = Campusero::Checkin.where(username: params[:username]).order('created_at DESC').first
         render json: @checkin
       end
     end
