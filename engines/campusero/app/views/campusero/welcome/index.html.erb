@@ -1,1 +1,57 @@
-<h1>Bem vindo <%= @user["first_name"] %></h1>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<style>
+    body{
+        background-image: -ms-linear-gradient(bottom right,#e82194 -80%,#0099FF 100%);
+        background-image: -moz-linear-gradient(bottom right,#e82194 -80%,#0099FF 100%);
+        background-image: -o-linear-gradient(bottom right,#e82194 -80%,#0099FF 100%);
+        background-image: -webkit-gradient(linear,right bottom,left top,color-stop(-80,#e82194),color-stop(100,#0099FF));
+        background-image: -webkit-linear-gradient(bottom right,#e82194 -80%,#0099FF 100%);
+        background-image: linear-gradient(to top left,#e82194 -80%,#0099FF 100%);
+        color: white;
+        font-family: 'Roboto', sans-serif;
+    }
+    .box.success {
+        width: 100%;
+        max-width: 396px;
+        position: absolute;
+        left: 50%;
+        top: 33px;
+        text-align: center;
+        transform: translateX(-50%);
+        border: 1px solid #fff;
+        border-radius: 6px;
+        color: #fff;
+        padding-bottom: 25px;
+    }
+
+    .title{
+        font-size: 22px;
+    }
+
+    .logo{
+        max-width: 200px;
+        height: auto;
+    }
+
+    .btn{
+        background-color: #f27021!important;
+    }
+
+    .btn-block{
+        display: block;
+        margin: 10px;
+        padding: 9px 10px;
+        border-radius: 5px;
+        color: #fff;
+        text-decoration: none;
+        margin-top: 40px;
+    }
+
+</style>
+
+<div class="box success">
+    <p class="title">Olá, <%= @user['name']%></p>
+    <img class="logo" src="https://accounts.campuse.ro/public/images/Campuseros_logo.png" alt="">
+    <a class="btn btn-block" href="campuseiroapp://index?at=123abc">Prosseguir para plataforma</a>
+</div>
+

@@ -2,3 +2,15 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+box.success {
+  width: 100%;
+  max-width: 396px;
+  position: absolute;
+  left: 50%;
+  top: 33px;
+  text-align: center;
+  transform: translateX(-50%);
+  border: 1px solid #fff;
+  border-radius: 6px;
+  color: #fff;
+}
