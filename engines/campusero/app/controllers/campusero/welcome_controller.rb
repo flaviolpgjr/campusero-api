@@ -4,6 +4,7 @@ module Campusero
   class WelcomeController < ApplicationController
     def index
       @token = params[:at]
+      @refresh_token = params[:rt]
       response = HTTParty.get('https://sandboxapi.campuse.ro/user/myprofile/')
       
       
