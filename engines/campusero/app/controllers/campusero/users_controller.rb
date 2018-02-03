@@ -4,7 +4,7 @@ require 'json'
 module Campusero
   class UsersController < ApplicationController
     include HTTParty
-    base_uri 'https://#{ENV['CPBR_CLIENT_ID']}:#{ENV['CPBR_SECRET_KEY']}@sandboxaccounts.campuse.ro'
+    base_uri "https://#{ENV['CPBR_CLIENT_ID']}:#{ENV['CPBR_SECRET_KEY']}@sandboxaccounts.campuse.ro"
 
     # GET campusero/code?code=:code
     def callback
