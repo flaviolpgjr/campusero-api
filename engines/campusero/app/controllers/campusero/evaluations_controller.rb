@@ -12,12 +12,24 @@ module Campusero
 
     # POST campusero/evaluations
     def create
-      @evaluation = Campusero::Evaluation.create(evaluation_params)
-      if @evaluation.save
-        render json: @evaluation, status: :created, location: @evaluate
-      else
-        render json: @evaluation.errors, status: :unprocessable_entity
-      end
+
+      payload = {
+        body: {
+          score: params[:note]
+        }
+      }
+      headers = {'Authorization': "Bearer #{@params[:token]}"}
+
+      response = HTTParty.post("https://sandboxapi.campuse.ro/agenda/activity/#{params[:slug]}/rate",payload)
+      
+      render json: response
+
+      #@evaluation = Campusero::Evaluation.create(evaluation_params)
+      #if @evaluation.save
+      #  render json: @evaluation, status: :created, location: @evaluate
+      #else
+      #  render json: @evaluation.errors, status: :unprocessable_entity
+      #end
     end
 
     # PATCH/PUT campusero/evaluations/1
