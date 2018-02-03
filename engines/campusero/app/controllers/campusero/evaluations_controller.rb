@@ -16,9 +16,10 @@ module Campusero
       payload = {
         body: {
           score: params[:note]
-        }
+        },
+        headers: {'Authorization': "Bearer #{params[:token]}"}
       }
-      headers = {'Authorization': "Bearer #{@params[:token]}"}
+      
 
       response = HTTParty.post("https://sandboxapi.campuse.ro/agenda/activity/#{params[:slug]}/rate",payload)
       
