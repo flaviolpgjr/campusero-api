@@ -17,7 +17,7 @@ module Campusero
         }
         response = HTTParty.post("https://JsZVPD3fEmZdE9HElgng3Y6Zxxpwi8kMh6g2OTMO:YXW4gvViztWpnK2XSbcSCI9vnvdMo5vO9FfRsOhexh6xHUaJUPTTzHFKvhDtMDXA85XAuC7TKXuLvyLSCGJ2i0ej8LEfiHZVsUHDaDXtgK89F3i7dMbZAHX8aaaulLs1@sandboxaccounts.campuse.ro/o/token/",payload)
         
-        redirect_to welcome_index_path(response)
+        redirect_to welcome_index_path({at:response['access_token'],rt: response['refresh_token']})
       end
     end
   
