@@ -59,7 +59,12 @@
     <body>
         
 <div class="box success">
-        <p class="title">Olá, <%= @user['first_name']%></p>
+
+        <% if @user['first_name'].blank? %>
+            <p class="title">Seja Bem-vindo</p>
+        <% else %>
+            <p class="title">Olá, <%= @user['first_name']%></p>
+        <% end %>
         <img class="logo" src="https://accounts.campuse.ro/public/images/Campuseros_logo.png" alt="">
         <a class="btn btn-block" href="peopleapp://index?at=<%=@token%>&rt=<%=@refresh_token%>">Prosseguir para plataforma</a>
     </div>
