@@ -20,6 +20,11 @@ module Campusero
       end
     end
 
+    def last_checkin
+      @checkin = Checkin.where(username: params[:username]).last
+      render json: @checkin
+    end
+
     # PATCH/PUT campusero/checkins/1
     def update
       if @checkin.update(checkin_params)
