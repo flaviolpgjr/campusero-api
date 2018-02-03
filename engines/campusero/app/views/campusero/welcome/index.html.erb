@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-<style>
+    <style>
         body{
             background-image: -ms-linear-gradient(bottom right,#e82194 -80%,#0099FF 100%);
             background-image: -moz-linear-gradient(bottom right,#e82194 -80%,#0099FF 100%);
@@ -58,24 +58,19 @@
 
     <body>
         
-<div class="box success">
+        <div class="box success">
 
 
-    <% if @user['first_name'].blank? %>
-            <p class="title">Seja Bem-vindo</p>
-        <% else %>
-            <p class="title">Olá, <%= @user['first_name']%></p>
-        <% end %>
-        <img class="logo" src="https://accounts.campuse.ro/public/images/Campuseros_logo.png" alt="">
-        <a class="btn btn-block" href="peopleapp://index?at=<%=@token%>&rt=<%=@refresh_token%>">Prosseguir para plataforma</a>
-    </div>
+            <% if @user['first_name'].blank? %>
+                <p class="title">Seja Bem-vindo</p>
+            <% else %>
+                <p class="title">Olá, <%= @user['first_name']%></p>
+            <% end %>
+            <img class="logo" src="https://accounts.campuse.ro/public/images/Campuseros_logo.png" alt="">
+            <a class="btn btn-block" href="peopleapp://index?at=<%=@token%>&rt=<%=@refresh_token%>">Prosseguir para plataforma</a>
+        </div>
     
     
     </body>
 
 </html>
-
-<pre>
-
-    <%= @user %>
-</pre>
