@@ -62,7 +62,7 @@ module Campusero
           average: Campusero::Evaluation.where(slug: params[:id]).average(:note),
           sum: Campusero::Evaluation.where(slug: params[:id]).sum(:note)
         }
-        render json: res , status: :created, location: @evaluate
+        render json: response , status: :created, location: @evaluate
       end
     end
 
