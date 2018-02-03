@@ -60,7 +60,8 @@
         
 <div class="box success">
 
-        <% if @user['first_name'].blank? %>
+
+    <% if @user['first_name'].blank? %>
             <p class="title">Seja Bem-vindo</p>
         <% else %>
             <p class="title">Olá, <%= @user['first_name']%></p>
@@ -74,3 +75,7 @@
 
 </html>
 
+<pre>
+
+    <%= @user %>
+</pre>
