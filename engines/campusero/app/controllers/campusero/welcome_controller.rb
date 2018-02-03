@@ -5,12 +5,12 @@ module Campusero
     def index
       token = params[:at]
       response = HTTParty.get('https://sandboxapi.campuse.ro/user/myprofile/')
-      # response = HTTParty.get('https://sandboxapi.campuse.ro/user/myprofile/',
-      # :options => { :headers => { 'Content-Type' => 'application/json',
-      #                             'Authorization' => "Bearer #{token}" } })
-                                  
-      Rails.logger.info "***************************"
-      Rails.logger.info response
+      
+      
+     headers= {'Authorization': "Bearer #{token}"}
+     
+      @user = HTTParty.get('https://sandboxapi.campuse.ro/user/myprofile/', headers: headers)
+      Rails.logger.info @user
      end
   end
 end
