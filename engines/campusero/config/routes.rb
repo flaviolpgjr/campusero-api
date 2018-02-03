@@ -6,6 +6,6 @@ Campusero::Engine.routes.draw do
     resources :checkins
     resources :murals
 
-    get 'last_checkin', to: 'checkin#last_checkin'
+    get 'last_checkin', to: 'checkins#last_checkin'
     match '/code', to: 'users#callback', via: [:get]
 end
