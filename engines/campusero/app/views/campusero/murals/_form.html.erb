@@ -1,0 +1,27 @@
+<%= form_for(mural) do |f| %>
+  <% if mural.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mural.errors.count, "error") %> prohibited this mural from being saved:</h2>
+
+      <ul>
+      <% mural.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @mural.username %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @mural.description %>
+</p>
+
+<%= link_to 'Edit', edit_mural_path(@mural) %> |
+<%= link_to 'Back', murals_path %>
