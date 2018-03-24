@@ -5,7 +5,7 @@ API desenvolvida na hackathon Campus Party Global Hacking, na qual a equipe teve
 #### Pré-requisitos
 - Ruby 2.3.3 - [Instalação](https://gorails.com/setup/ubuntu/14.04#ruby)
 - Rails 5.0.6 - [Instalação](https://gorails.com/setup/ubuntu/14.04#rails)
-- Postgresql - [Download e instalação](https://www.postgresql.org)
+- PostgreSQL - [Download e instalação](https://www.postgresql.org)
 
 #### Instalando
 1. Acesse o diretório
