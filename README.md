@@ -1,24 +1,10 @@
-# README
+# campusero-api
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+API desenvolvida na hackathon Campus Party Global Hacking, na qual a equipe teve que desenvolver um aplicativo para a campus party global, durante a campus party brasil 11, esta api é utilizada no APP:
+[CampuseroAPP](https://github.com/diegotsi/CampuseroApp)
 
-Things you may want to cover:
+#### Pré-requisitos
+- Ruby 2.3.3 - [Instalação](https://gorails.com/setup/ubuntu/14.04#ruby)
+- Rails 5.0.6 - [Instalação](https://gorails.com/setup/ubuntu/14.04#rails)
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
